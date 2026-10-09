@@ -1,0 +1,36 @@
+{
+  "steps": [
+    {
+      "action": "goto",
+      "url": "${BASE_URL}/login"
+    },
+    {
+      "action": "fill",
+      "selector": "#email",
+      "value": "user@example.com"
+    },
+    {
+      "action": "fill",
+      "selector": "#password",
+      "value": "password123"
+    },
+    {
+      "action": "click",
+      "selector": "button[type=submit]"
+    },
+    {
+      "action": "wait_for_selector",
+      "selector": ".dashboard",
+      "timeout_ms": 30000
+    },
+    {
+      "action": "get_text",
+      "selector": "h1",
+      "save_as": "heading_text"
+    },
+    {
+      "action": "screenshot",
+      "name": "post-login"
+    }
+  ]
+}

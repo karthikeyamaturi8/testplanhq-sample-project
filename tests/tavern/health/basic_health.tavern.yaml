@@ -1,0 +1,10 @@
+test_name: Basic health check
+
+stages:
+  - name: Check health endpoint
+    request:
+      url: "{tavern.env_vars.BASE_URL}/api/health"
+      method: GET
+
+    response:
+      status_code: 200

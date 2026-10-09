@@ -1,0 +1,9 @@
+connection: ${SQL_TARGET_URL}
+
+assertions:
+  - name: user exists
+    query: "SELECT id, name FROM users WHERE id = 1"
+    expect_row_count: 1
+    expect:
+      id: 1
+      name: John
